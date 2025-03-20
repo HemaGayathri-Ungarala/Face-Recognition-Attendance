@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Recognition System</title>
+    <link rel="stylesheet" href="styles.css">  <!-- External CSS file -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Face Recognition Attendance System</h1>
+
+        <div class="form-container">
+            <h2>Step 1: Capture Your Face</h2>
+            <form id="faceCaptureForm" action="/run_script" method="post">
+                <label for="name">Enter Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="Type your name..." required>
+                <button type="submit" name="script" value="face_dataset" class="btn">📸 Capture Face</button>
+            </form>
+        </div>
+
+        <div class="form-container">
+            <h2>Step 2: Train the Model</h2>
+            <form action="/run_script" method="post">
+                <button type="submit" name="script" value="trained_data" class="btn">⚙️ Train Data</button>
+            </form>
+        </div>
+
+        <div class="form-container">
+            <h2>Step 3: Recognize & Mark Attendance</h2>
+            <form action="/run_script" method="post">
+                <button type="submit" name="script" value="face_recognization" class="btn">✅ Recognize Face</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
